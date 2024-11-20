@@ -7,13 +7,13 @@ function InputBox({
     amount,
     onAmountChange,
     onCurrencyChange,
-    currencyOptions=[],
-    selectCurrency='usd',
+    currencyOptions=[], //an empty array becuase if user forgets to give an array then also the site will not crash
+    selectCurrency='usd', //by defualt value
     amountDisable=false,
     currencyDisable=false,
     className = "",
 }) {
-   const amountInputId = useId()
+   const amountInputId = useId() // will generate unque id for each input 
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
